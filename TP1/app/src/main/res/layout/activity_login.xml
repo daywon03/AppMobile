@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <!--Titre Connectez vous-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:gravity="center"
+        android:padding="14dp"
+        android:text="Connectez vous"
+        android:textColor="#FFFF"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <!--Identifiez-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="left"
+        android:text="Identifiez-vous"
+        android:textColor="#CCCCCC"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingLeft="16dp"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:paddingHorizontal="10dp"
+        >
+
+        <!--image Email-->
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_email"
+            android:padding="2dp"/>
+
+        <!--Email-->
+        <EditText
+            android:id="@+id/email"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true" />
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+
+        >
+
+        <ImageView
+            android:src="@drawable/ic_lock"
+            android:padding="2dp"
+            android:layout_gravity="start"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            />
+
+        <!--Mot de passe-->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
+
+    </TableRow>
+
+
+    <!--Mot de passe oublié-->
+    <TextView
+        android:id="@+id/mdp_oublie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:paddingRight="10dp"
+        android:layout_marginTop="8dp"
+        android:text="MOT DE PASSE OUBLIÉ ?"
+        android:textColor="#007BFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--login Connectez vous-->
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#FFA500"
+        android:text="CONNECTEZ-VOUS"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_new_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouveau sur Jumia ?"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Crée un compte"
+            android:textColor="#007BFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <!-- Barre gauche -->
+        <View
+            android:id="@+id/left_bar"
+            android:layout_width="110dp"
+            android:layout_height="3dp"
+            android:layout_alignParentStart="true"
+            android:background="#CCCCCC" />
+
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:text="OU"
+            android:textColor="#000000" />
+        <!-- Barre droite -->
+        <View
+            android:id="@+id/right_bar"
+            android:layout_width="110dp"
+            android:layout_height="3dp"
+            android:layout_alignParentEnd="true"
+            android:background="#CCCCCC" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#3b5998"
+        android:text="Continuer avec Facebook"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
