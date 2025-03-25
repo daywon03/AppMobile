@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
 
 <!-- Titre Connectez-vous -->
-<TextView
-    android:id="@+id/title"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#000"
-    android:gravity="center"
-    android:padding="14dp"
-    android:text="Connectez-vous"
-    android:textColor="#FFFF"
-    android:textSize="24sp"
-    android:textStyle="bold" />
+    <TableRow
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#000"
+        android:padding="10dp"
+        >
 
-<!-- LinearLayout pour le contenu, positionné en dessous du titre -->
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:onClick="goToSplash"
+            android:background="@drawable/ic_fleche_cercle"
+            />
+        <!--Titre Connectez vous-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:gravity="left"
+            android:padding="14dp"
+            android:text="Connectez-vous"
+            android:textColor="#FFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+
+    <!-- LinearLayout pour le contenu, positionné en dessous du titre -->
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -69,7 +92,7 @@ android:id="@+id/container"
             <EditText
                 android:id="@+id/email"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/prompt_email"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:inputType="textEmailAddress"
@@ -214,3 +237,4 @@ android:id="@+id/container"
     </LinearLayout>
 </LinearLayout>
 </RelativeLayout>
+</ScrollView>

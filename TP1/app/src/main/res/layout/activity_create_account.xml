@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateAccountActivity"
     android:orientation="vertical">
 
-    <TextView
+    <TableRow
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:background="#000"
+        android:padding="15dp"
         android:gravity="center"
-        android:padding="14dp"
-        android:text="Créer un compte"
-        android:textColor="#FFFF"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        >
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_fleche_cercle"
+            android:layout_gravity="center"
+            android:onClick="goToLogin"
+            />
+        <!--Titre Connectez vous-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:gravity="left"
+            android:text="Créer un compte"
+            android:textColor="#FFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            />
+    </TableRow>
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -53,7 +77,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Prénom"
-            android:inputType="textEmailAddress"
             android:selectAllOnFocus="true" />
 
     </TableRow>
@@ -66,7 +89,6 @@
         android:layout_marginTop="30dp"
         android:hint="Nom"
         android:layout_marginLeft="25dp"
-        android:inputType="textEmailAddress"
         android:selectAllOnFocus="true" />
 
     <TableRow
@@ -87,7 +109,7 @@
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true" />
     </TableRow>
@@ -111,9 +133,10 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true" />
+        android:hint="@string/prompt_password"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        />
 
     </TableRow>
 
@@ -129,18 +152,20 @@
         <ImageView
             android:layout_width="27dp"
             android:layout_height="27dp"
-            android:src="@drawable/ic_lock"
+            android:src="@drawable/ic_telephone"
             />
         <Spinner
             android:id="@+id/spinner_country_code"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
 
         <EditText
             android:id="@+id/phone_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Numéro de téléphone" />
+            android:hint="Numéro de téléphone"
+            android:inputType="phone"/>
 
     </TableRow>
 
@@ -164,3 +189,5 @@
 
 </LinearLayout>
 </LinearLayout>
+
+</ScrollView>

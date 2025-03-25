@@ -1,205 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    android:fillViewport="true"
+    android:id="@+id/container"
     >
-    <!--Titre Connectez vous-->
-    <TextView
-        android:id="@+id/title"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000"
-        android:gravity="center"
-        android:padding="14dp"
-        android:text="Connectez vous"
-        android:textColor="#FFFF"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <!--Identifiez-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="left"
-        android:text="Identifiez-vous"
-        android:textColor="#CCCCCC"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:paddingLeft="16dp"/>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
-        android:paddingHorizontal="10dp"
-        >
-
-        <!--image Email-->
-        <ImageView
-            android:layout_width="37dp"
-            android:layout_height="37dp"
-            android:layout_gravity="start"
-            android:src="@drawable/ic_email"
-            android:padding="2dp"/>
-
-        <!--Email-->
-        <EditText
-            android:id="@+id/email"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:inputType="textEmailAddress"
-            android:selectAllOnFocus="true" />
-
-    </TableRow>
-
-
-    <TableRow
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
-
-        >
-
-        <ImageView
-            android:src="@drawable/ic_lock"
-            android:padding="2dp"
-            android:layout_gravity="start"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
-            />
-
-        <!--Mot de passe-->
-        <EditText
-            android:id="@+id/password"
+        <!-- Header avec bouton retour -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/prompt_password"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            android:selectAllOnFocus="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#FFFFFF"
+            android:onClick="goToSplash"
+            app:navigationIcon="@drawable/ic_fleche_cercle"
+            app:navigationContentDescription="@string/back"
+            app:title="Connexion"
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username" />
-
-
-    </TableRow>
+            app:titleTextColor="#222222"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:navigationIconTint="#40C4A1" />
 
 
-    <!--Mot de passe oublié-->
-    <TextView
-        android:id="@+id/mdp_oublie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:paddingRight="10dp"
-        android:layout_marginTop="8dp"
-        android:text="MOT DE PASSE OUBLIÉ ?"
-        android:textColor="#007BFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <!-- Formulaire -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/RoundedInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="#40C4A1">
 
-    <!--login Connectez vous-->
-    <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="#FFA500"
-        android:text="CONNECTEZ-VOUS"
-        android:textStyle="bold"
-        android:layout_marginHorizontal="10dp"
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:textColor="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/RoundedInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="#40C4A1">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                android:textColor="#222222" />
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Mot de passe oublié -->
         <TextView
-            android:id="@+id/tv_new_user"
+            android:id="@+id/mdp_oublie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nouveau sur Jumia ?"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/tv_create_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Crée un compte"
-            android:textColor="#007BFF"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:text="@string/forgot_password"
+            android:textColor="#40C4A1"
             android:textStyle="bold" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-
-        <!-- Barre gauche -->
-        <View
-            android:id="@+id/left_bar"
-            android:layout_width="110dp"
-            android:layout_height="3dp"
-            android:layout_alignParentStart="true"
-            android:background="#CCCCCC" />
-
-
-        <TextView
-            android:id="@+id/tv_or"
-            android:layout_width="wrap_content"
+        <!-- Bouton de connexion -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            style="@style/RoundedButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#40C4A1"
+            android:onClick="goToMain"
+            android:text="@string/action_sign_in"
+            android:textColor="#FFFFFF" />
+
+        <!-- Séparateur -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="32dp"
             android:gravity="center"
-            android:layout_margin="10dp"
-            android:textSize="18dp"
-            android:text="OU"
-            android:textColor="#000000" />
-        <!-- Barre droite -->
-        <View
-            android:id="@+id/right_bar"
-            android:layout_width="110dp"
-            android:layout_height="3dp"
-            android:layout_alignParentEnd="true"
-            android:background="#CCCCCC" />
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="800dp"
+                android:layout_height="1dp"
+                android:background="#E1E1E1" />
+
+        </LinearLayout>
+
+
+
+        <!-- Inscription -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nouveau utilisateur ? "
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/tv_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goToCreateAccount"
+                android:text="Créer un compte"
+                android:textColor="#40C4A1"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_facebook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#3b5998"
-        android:text="Continuer avec Facebook"
-        android:layout_marginHorizontal="10dp"
-        android:textColor="#FFFFFF" />
-
-</LinearLayout>
+</ScrollView>
