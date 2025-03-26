@@ -2,192 +2,148 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-<LinearLayout
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateAccountActivity"
-    android:orientation="vertical">
+    android:background="#FFFFFF"
+    android:fillViewport="true">
 
-    <TableRow
-        android:id="@+id/title"
+    <!-- Conteneur unique -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#000"
-        android:padding="15dp"
-        android:gravity="center"
-        >
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <ImageButton
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/ic_fleche_cercle"
-            android:layout_gravity="center"
-            android:onClick="goToLogin"
-            />
-        <!--Titre Connectez vous-->
-        <TextView
+        <!-- Barre d'outils en haut -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            android:onClick="goToSplash"
+            app:title="Créer un compte"
+            app:titleTextColor="#222222"
+            app:navigationIcon="@drawable/ic_fleche_cercle"
+            app:navigationContentDescription="Retour"
+            app:navigationIconTint="#40C4A1"/>
+
+        <!-- Espace entre la toolbar et le formulaire -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Carte contenant le formulaire -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000"
-            android:gravity="left"
-            android:text="Créer un compte"
-            android:textColor="#FFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            />
-    </TableRow>
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white"
+            android:padding="16dp">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="10dp"
-    >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Créer un nouveau compte"
-        android:textColor="#838181"
-        android:textSize="16dp"
-    />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:orientation="vertical">
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        >
+                <!-- Prénom -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/RoundedInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Prénom"
+                        android:inputType="textPersonName"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageView
-            android:layout_width="27dp"
-            android:layout_height="27dp"
-            android:src="@drawable/ic_account"
-            />
+                <!-- Nom -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/RoundedInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                    <EditText
+                        android:id="@+id/nom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nom"
+                        android:inputType="textPersonName"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/username"
+                <!-- Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/RoundedInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Mot de passe -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/RoundedInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mot de passe"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Numéro de téléphone (avec Spinner pour code pays) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Spinner
+                        android:id="@+id/spinner_country_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/RoundedInputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:id="@+id/phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Numéro de téléphone"
+                            android:inputType="phone"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Bouton d'inscription -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            style="@style/RoundedButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Prénom"
-            android:selectAllOnFocus="true" />
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/primary_color"
+            android:text="S'INSCRIRE"
+            android:textColor="#FFFFFF"/>
 
-    </TableRow>
-
-
-    <EditText
-        android:id="@+id/nom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:hint="Nom"
-        android:layout_marginLeft="25dp"
-        android:selectAllOnFocus="true" />
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-
-        >
-
-        <ImageView
-            android:layout_width="27dp"
-            android:layout_height="27dp"
-            android:src="@drawable/ic_email"
-            />
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true" />
-    </TableRow>
-
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-
-        >
-
-        <ImageView
-            android:layout_width="27dp"
-            android:layout_height="27dp"
-            android:src="@drawable/ic_lock"
-            />
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_password"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="true"
-        />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-
-        >
-
-        <ImageView
-            android:layout_width="27dp"
-            android:layout_height="27dp"
-            android:src="@drawable/ic_telephone"
-            />
-        <Spinner
-            android:id="@+id/spinner_country_code"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
-        <EditText
-            android:id="@+id/phone_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Numéro de téléphone"
-            android:inputType="phone"/>
-
-    </TableRow>
-
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="#FFA500"
-        android:text="CONNECTEZ-VOUS"
-        android:textStyle="bold"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
-
-</LinearLayout>
-</LinearLayout>
-
+    </LinearLayout>
 </ScrollView>
