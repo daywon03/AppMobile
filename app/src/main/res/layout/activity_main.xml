@@ -1,76 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent">
 
-    <!-- Barre d'outils Material -->
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/mainToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#FFFFFF"
-        app:title="Accueil"
-        app:titleTextColor="#222222"
-        app:navigationIconTint="#40C4A1"
-        />
-
-    <!-- Un SEUL enfant direct du CoordinatorLayout : le ScrollView -->
-    <ScrollView
-        android:id="@+id/scrollView"
+    <!-- Contenu principal de l'activité -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:fillViewport="true">
+        android:background="#FFFFFF">
 
-        <!-- Un SEUL enfant direct du ScrollView : le LinearLayout -->
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/mainToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            app:title="Accueil"
+            app:titleTextColor="#222222"
+            app:navigationIconTint="#40C4A1" />
+
+        <!-- Conteneur pour les fragments -->
+        <FrameLayout
+            android:id="@+id/container_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize" />
+
+        <!-- Section pour ton champ de recherche et bouton -->
         <LinearLayout
-            android:id="@+id/containerLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="?attr/actionBarSize">
 
-            <!-- Carte contenant les infos utilisateur -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- Ton champ de recherche -->
+            <EditText
+                android:id="@+id/searchField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:cardCornerRadius="16dp"
-                app:cardUseCompatPadding="true"
-                app:cardPreventCornerOverlap="true"
-                android:layout_marginBottom="16dp">
+                android:hint="Rechercher un équipement"
+                android:padding="10dp"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/userInfoTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Chargement des informations..."
-                        android:textColor="#222222"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Bouton pour aller vers d'autres fonctionnalités -->
-            <com.google.android.material.button.MaterialButton
+            <!-- Bouton pour voir les équipements -->
+            <Button
                 android:id="@+id/btnEquipments"
-                style="@style/RoundedButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="#40C4A1"
-                android:text="Voir mes équipements"
-                android:textColor="#FFFFFF" />
-
+                android:text="Voir mes équipements" />
         </LinearLayout>
-    </ScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Menu latéral -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/drawer_header" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

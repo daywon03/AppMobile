@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_list_habitats"
+        android:title="Liste des habitats"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/nav_my_habitat"
+        android:title="Mon habitat"
+        android:icon="@drawable/ic_person" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="Mes notifications"
+        android:icon="@drawable/ic_notifications" />
+
+    <item
+        android:id="@+id/nav_preferences"
+        android:title="Mes préférences"
+        android:icon="@drawable/ic_settings" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:title="À propos"
+        android:icon="@drawable/ic_info" />
+</menu>
