@@ -16,6 +16,11 @@
           <theme>@style/Theme.PowerHome</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml">
+        <config>
+          <theme>@style/Theme.PowerHome</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
         <config>
           <theme>@style/Theme.PowerHome</theme>
@@ -26,7 +31,27 @@
           <theme>@style/Theme.PowerHome</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml">
+        <config>
+          <theme>@style/Theme.PowerHome</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+        <config>
+          <theme>@style/Theme.PowerHome</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/content_reset_password.xml">
+        <config>
+          <theme>@style/Theme.PowerHome</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml">
+        <config>
+          <theme>@style/Theme.PowerHome</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_second.xml">
         <config>
           <theme>@style/Theme.PowerHome</theme>
         </config>
@@ -38,33 +63,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c9893be-22ae-463d-84ef-51c406dbfbcf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/CreateAccountActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/CreateAccountActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/data/LoginDataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/data/LoginRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/data/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/data/model/LoggedInUser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +191,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java/tp1/dam/powerhome/keysecret" />
     </key>
+    <key name="android.template.-761690914">
+      <recent name="tp1.dam.powerhome" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -272,12 +284,12 @@
       <map>
         <entry key="tp1.dam.powerhome">
           <value>
-            <CheckInfo lastCheckTimestamp="1742938348274" />
+            <CheckInfo lastCheckTimestamp="1743025248313" />
           </value>
         </entry>
         <entry key="tp1.dam.powerhome.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1742938348274" />
+            <CheckInfo lastCheckTimestamp="1743025248313" />
           </value>
         </entry>
       </map>

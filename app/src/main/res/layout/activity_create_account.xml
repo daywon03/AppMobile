@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="15dp">
 
         <!-- Barre d'outils en haut -->
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             android:background="#FFFFFF"
             android:onClick="goToSplash"
             app:title="Créer un compte"
@@ -95,7 +95,8 @@
                     style="@style/RoundedInputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:endIconMode="password_toggle">
                     <EditText
                         android:id="@+id/password"
                         android:layout_width="match_parent"

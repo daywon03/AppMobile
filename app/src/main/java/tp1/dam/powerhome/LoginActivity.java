@@ -96,6 +96,10 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SplashActivity.class);
         startActivity(intent);
     }
+    public void goToForgotPassword(View view) {
+        Intent intent = new Intent(this, ForgotPasswordActivity.class);
+        startActivity(intent);
+    }
 
     public void goToMain(String email, String token) {
         Intent intent = new Intent(this, MainActivity.class);

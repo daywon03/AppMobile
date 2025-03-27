@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="15dp">
 
         <!-- Header avec bouton retour -->
         <com.google.android.material.appbar.MaterialToolbar
@@ -24,9 +24,7 @@
             app:navigationIcon="@drawable/ic_fleche_cercle"
             app:navigationContentDescription="@string/back"
             app:title="Connexion"
-
             app:titleTextColor="#222222"
-            app:titleTextAppearance="@style/TextAppearance.AppCompat.Title"
             app:navigationIconTint="#40C4A1" />
 
 
@@ -54,7 +52,9 @@
             android:layout_height="75dp"
             android:layout_marginTop="16dp"
             app:startIconDrawable="@drawable/ic_lock"
-            app:startIconTint="#40C4A1">
+            app:startIconTint="#40C4A1"
+            app:endIconMode="password_toggle">
+
 
             <EditText
                 android:id="@+id/password"
@@ -66,6 +66,7 @@
                 android:inputType="textPassword"
                 android:selectAllOnFocus="true"
                 android:textColor="#222222" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Mot de passe oublié -->
@@ -77,6 +78,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/forgot_password"
             android:textColor="#40C4A1"
+            android:onClick="goToForgotPassword"
             android:textStyle="bold" />
 
         <!-- Bouton de connexion -->
