@@ -16,6 +16,8 @@ ion = "3.1.0"
 retrofit = "2.11.0"
 converterGson = "2.11.0"
 loggingInterceptor = "5.0.0-alpha.14"
+legacySupportV4 = "1.0.0"
+recyclerview = "1.3.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -34,6 +36,8 @@ ion = { group = "com.koushikdutta.ion", name = "ion", version.ref = "ion" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "converterGson" }
 logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

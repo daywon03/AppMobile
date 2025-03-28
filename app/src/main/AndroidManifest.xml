@@ -24,16 +24,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".CreateAccountActivity" />
-        <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ListeHabitatsFragment" />
-        <activity android:name=".MonHabitatFragment" />
-        <activity android:name=".NotificationsFragment" />
-        <activity android:name=".PreferencesFragment" />
-        <activity android:name=".AboutDialogFragment" />
+
+        <activity android:name=".LoginActivity"
+            android:exported="true"/>
+        <activity android:name=".CreateAccountActivity"
+            android:exported="true"/>
+        <activity android:name=".ForgotPasswordActivity"
+            android:exported="true"/>
+        <activity android:name=".ResetPasswordActivity"
+            android:exported="true"/>
+        <activity android:name=".MainActivity"
+            android:exported="true"
+            />
+
+
 
     </application>
 
